@@ -4,13 +4,13 @@
   <a href="https://github.com/qyxtim/Are-You-OK"><img alt="GitHub issues" src="https://img.shields.io/github/last-commit/qyxtim/Are-You-OK"></a>
   <a href="https://github.com/qyxtim/Are-You-OK/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/qyxtim/Are-You-OK"></a>
   <a href="https://github.com/qyxtim/Are-You-OK/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/qyxtim/Are-You-OK"></a>
-Are-You-OK is a Flask-based Web App to monitor whether the Internet Service you care is still working.
+
+Are-You-OK is a **Flask-based**, **responsive** Web App to monitor whether the Internet Service you care about is still working.
+
 
 # Demo-Preview
 
 ![Banner](https://github.com/qyxtim/Are-You-OK/blob/main/images/pc.jpeg)
-
-![Banner](https://github.com/qyxtim/Are-You-OK/blob/main/images/phone.jpeg)
 
 # Get Started
 Before using this project, please make sure you have:
