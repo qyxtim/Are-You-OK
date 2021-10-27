@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+        ARE YOU OK? {{subtitle}}
+    </title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body class="w3-content" style="max-width:800px">
+
+    <div class="w3-bar w3-blue">
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="/login" class="w3-bar-item w3-button w3-hide-small">Login</a>
+        <a href="/log" class="w3-bar-item w3-button w3-hide-small">Add</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+            onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div id="nav" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
+        <a href="/login" class="w3-bar-item w3-button">Login</a>
+        <a href="/log" class="w3-bar-item w3-button">Add</a>
+    </div>
+
+    <div class="w3-container w3-blue">
+        <h2>Are You OK</h2>
+    </div>
+
+    {% block body %}
+    {% endblock %}
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+</html>

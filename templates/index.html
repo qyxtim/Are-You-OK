@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<p style="text-align:center;">This site is used to track whether the web service is running or not.</p>
+
+{% for item in response %}
+    <div class="w3-card-4" style="width:100%;">
+        <footer class="w3-container w3-{{item.color}} w3-hover-shadow w3-center">
+        <h5><a href="{{item.link}}">{{item.description}} - {{item.link}}</a></h5>
+        </footer>
+    </div>
+    <br>
+{% endfor %}
+{% endblock %}

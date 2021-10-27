@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <br>
+
+    {% if status == False %}
+        <div class="w3-container w3-blue">
+            <h2>Login</h2>
+        </div>
+
+        <form class="w3-container" method="post" action="/login">
+            <p>
+            <label>Username</label>
+            <input class="w3-input" type="text" name="username" required></p>
+            <p>
+            <label>Password</label>
+            <input class="w3-input" type="password" name="password" required></p>
+            <input class="w3-btn w3-blue" type="submit" value="Submit" />
+        </form>
+    {% else %}
+        <form class="w3-container" method="post" action="/logout">
+            <input class="w3-btn w3-blue" type="submit" value="Logout" />
+        </form>
+    {% endif %}
+{% endblock %}
