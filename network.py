@@ -1,6 +1,7 @@
 import re
 import requests
 
+# regex for checking the validity of website
 regex = re.compile(
     r'^(?:http|ftp)s?://'  # http:// or https://
     # domain...
@@ -10,6 +11,7 @@ regex = re.compile(
     r'(?::\d+)?'  # optional port
     r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
+# Headers sent to the server
 headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
     "Accept-Encoding": "gzip, deflate",
@@ -26,6 +28,6 @@ def is_valid_url(url: str) -> bool:
 
 
 # Helper function to ping
-def ping(url) -> bool:
+def ping(url: str) -> bool:
     r = requests.head(url, headers=headers)
     return r.status_code == 200
