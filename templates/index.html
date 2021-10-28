@@ -4,11 +4,17 @@
 <p style="text-align:center;">This site is used to track whether the web service is running or not.</p>
 
 {% for item in response %}
-    <div class="w3-card-4" style="width:100%;">
-        <footer class="w3-container w3-{{item.color}} w3-hover-shadow w3-center">
-        <h5><a href="{{item.link}}">{{item.description}} - {{item.link}}</a></h5>
-        </footer>
+<div class="w3-card-4 w3-round-large" style="width:100%;">
+    <div class="w3-container w3-display-container w3-{{item.color}} w3-center w3-round-large">
+        <h5><a href="{{item.link}}" target="_blank">{{item.description}} - {{item.link}}</a></h5>
+        {% if status %}
+        <form class="w3-display-right" method="post" action="/delete">
+            <input type="hidden" name="link" value="{{item.link}}" />
+            <input class="delete-btn" type="submit" value="X" />
+        </form>
+        {% endif %}
     </div>
-    <br>
+</div>
+<br>
 {% endfor %}
 {% endblock %}

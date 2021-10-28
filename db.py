@@ -14,3 +14,6 @@ class open_db:
         self.db.commit()
         self.cursor.close()
         self.db.close()
+
+        if exc_type:
+            raise exc_type(exc_value)
