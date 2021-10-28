@@ -44,7 +44,8 @@ The implementation of this Web App is split into five files:
 
 # New Features in the Future
 
-- [ ] Delete websites added before
+- [x] Error Handling
+- [x] Delete websites added before
 
 # License
 [GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
